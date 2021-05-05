@@ -4,6 +4,15 @@ The Code along repository for the Youtube Series by Java Brains [Series Link](ht
 
 This repository contains the Frontend Application using **ReactJS** and Backend API using **Java SpringBoot**.
 
-The Data Source for IPL Data : [Kaggle.com](https://www.kaggle.com/nowke9/ipldata) 
+The Data Source for IPL Data : [Kaggle.com](https://www.kaggle.com/nowke9/ipldata)
+
+
+
+
+
+----------
+Resources:         *Todo: Delete this section*
+
+- Logos:  https://kreditings.com/ipl-logo-png/
 
 
