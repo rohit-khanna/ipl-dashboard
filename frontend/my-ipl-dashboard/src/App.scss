@@ -1,0 +1,16 @@
+.mainContent {
+  margin-top: 1rem;
+  width: 100%;
+  //border: 1px solid yellow;
+  color: white;
+
+  .sidebar {
+    flex-basis: 12rem;
+    //border-right: 1px solid white;
+  }
+  .content {
+    flex: 1;
+    margin-left: 4rem;
+    //border-right: 1px solid white;
+  }
+}

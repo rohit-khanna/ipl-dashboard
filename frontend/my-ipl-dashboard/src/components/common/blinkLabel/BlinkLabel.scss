@@ -1,0 +1,27 @@
+.blink {
+  padding: 0rem 1rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+span {
+  color: rgb(129, 202, 236);
+  animation: blink 1.2s linear infinite;
+  &:hover {
+    animation: none;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0.1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
