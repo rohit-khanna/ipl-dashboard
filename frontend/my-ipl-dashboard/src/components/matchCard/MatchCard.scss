@@ -1,0 +1,24 @@
+.smallCardContainer,
+.bigCardContainer {
+  //border: 1px solid white;
+  border-radius: 9px;
+  height: 10rem;
+  cursor: pointer;
+  padding: 0.5rem 0.5rem;
+  background-color: white;
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.smallCardContainer {
+  width: 11rem;
+}
+
+.bigCardContainer {
+  margin: 1rem 0;
+  padding: 1rem 1rem;
+  &:hover {
+    transform: translateY(0px);
+  }
+}

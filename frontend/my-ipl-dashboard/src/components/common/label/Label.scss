@@ -1,0 +1,26 @@
+.labelContainer {
+  padding: 0.15rem 0.25rem;
+
+  &.xs {
+    font-size: 0.5rem;
+  }
+  &.s {
+    font-size: 0.75rem;
+  }
+  &.m {
+    font-size: 1rem;
+  }
+  &.l {
+    font-size: 1.25rem;
+  }
+  &.xl {
+    font-size: 1.5rem;
+  }
+  &.l {
+    font-size: 2rem;
+  }
+
+  &.bold {
+    font-weight: bold;
+  }
+}

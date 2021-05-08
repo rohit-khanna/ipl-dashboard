@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Home from '../home';
 import TeamInfo from '../teamInfo';
 import MatchList from '../matchList';
-import MatchInfo from '../matchInfo';
+import MatchDetail from '../matchDetail';
 
 export default function Content() {
     return (
@@ -16,7 +16,7 @@ export default function Content() {
                     <MatchList />
                 </Route>
                 <Route path={`/team/:teamId/matches/:matchId`} exact>
-                    <MatchInfo />
+                    <MatchDetail />
                 </Route>
                 <Route path="*">
                     <Home />

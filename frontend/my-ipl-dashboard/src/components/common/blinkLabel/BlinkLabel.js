@@ -3,7 +3,7 @@ import './BlinkLabel.scss'
 
 export default function BlinkLabel({ text }) {
     return (
-        <div class="blink">
+        <div className="blink">
             <span>{text}</span>
         </div>
     )

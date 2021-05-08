@@ -7,10 +7,12 @@ import './Header.scss';
 
 export default function Header() {
     return (
-        <header>
+        <header className="d-flex align-items-center">
             <Link to="/">
                 <Image src={Logo} className="logo" thumbnail alt="logo" title="Home" />
             </Link>
+            {/* <h1>Dashboard</h1> */}
+
         </header>
     )
 }
