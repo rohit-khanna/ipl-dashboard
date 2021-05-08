@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import './TeamInfo.scss';
 import { fetchTeamInfo } from '../../services'
 import Label from "../common/label";
-import { isEmpty } from 'lodash';
+import { isEmpty, round } from 'lodash';
 import { BigCard, SmallCard } from '../matchCard';
 import { Button } from 'react-bootstrap';
 
@@ -18,30 +18,32 @@ export default function TeamInfo() {
 
         async function fetch() {
             const result = await fetchTeamInfo(teamId);
-            setData(result);
+            if (result.data)
+                setData(result.data);
         }
 
         if (teamId) {
             fetch()
         }
     }, [teamId]);
-    const { name, matchesPlayed, wins, matches, id } = data;
+    const { name, totalMatches, totalWins, matches } = data;
 
+    const winPercent = totalWins > 0 && totalMatches > 0 ? round(totalWins * 100 / totalMatches, 2) : 0
     return !isEmpty(data) ? (
         <div className="teamInfoContainer">
             <h2 className="heading">{name}</h2>
             <div className="d-flex justify-content-space-around matchInfoContainer">
                 <div className="matchesInfo d-flex">
                     <Label text="Matches Played:" bold />
-                    <Label text={matchesPlayed} />
+                    <Label text={totalMatches} />
                 </div>
                 <div className="matchesInfo d-flex">
                     <Label text="Win % :" bold />
-                    <Label text={`${wins * 100 / matchesPlayed} %`} />
+                    <Label classes={`${winPercent > 50 ? "green" : "red-light"}`} text={winPercent} />
                 </div>
             </div>
             <div className="d-flex flex-column matchDetailsContainer">
-                <BigCard />
+                <BigCard matchDetails={matches[0]} name={name} />
                 <div className="smallCards d-flex justify-content-space-between">
                     <SmallCard />
                     <SmallCard />

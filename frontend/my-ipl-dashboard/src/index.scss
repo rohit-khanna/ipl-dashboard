@@ -53,9 +53,15 @@ code {
 .align-items-center {
   align-items: center;
 }
+.align-items-flex-end {
+  align-items: flex-end;
+}
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
 h1 {
-  font-size: 2.5rem !important;
+  font-size: 2.75rem !important;
 }
 
 h2 {

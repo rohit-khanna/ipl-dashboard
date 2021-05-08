@@ -1,16 +1,26 @@
 header {
   border-bottom: 1px solid white;
+  position: relative;
   .logo {
     width: 5rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    flex-basis: 20%;
   }
-  h1 {
-    flex-basis: 80%;
-    text-align: center;
-    font-size: 4rem !important;
-    color: rgb(201, 225, 252);
-    font-family: cursive;
+
+  .labelContainer {
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+    font-style: oblique;
+    color: white;
+  }
+  .information {
+    flex: 1;
+    .blink {
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      margin-left: 45%;
+    }
   }
 }

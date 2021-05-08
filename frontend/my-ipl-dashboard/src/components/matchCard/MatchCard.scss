@@ -1,24 +1,51 @@
 .smallCardContainer,
 .bigCardContainer {
+  color: rgb(18, 18, 94);
   //border: 1px solid white;
-  border-radius: 9px;
-  height: 10rem;
+  //border-radius: 5px;
   cursor: pointer;
   padding: 0.5rem 0.5rem;
   background-color: white;
   &:hover {
     transform: translateY(-5px);
   }
+
+  .line {
+    margin: 0.5rem 0;
+    // &.head {
+    // }
+    // &.footer {
+    //   //    flex: 1;
+    // }
+  }
 }
 
 .smallCardContainer {
   width: 11rem;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  height: 10rem;
 }
 
 .bigCardContainer {
-  margin: 1rem 0;
-  padding: 1rem 1rem;
+  color: rgb(238, 223, 12);
+  //background-color: cornsilk;
+  height: 9rem;
+  margin: 2rem 0 2rem 0;
+  padding: 0.25rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  background-image: linear-gradient(50deg, #19388a, #19388a);
+
   &:hover {
     transform: translateY(0px);
+  }
+
+  .result {
+    .labelContainer {
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
   }
 }
