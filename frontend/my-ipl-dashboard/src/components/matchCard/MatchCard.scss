@@ -12,11 +12,6 @@
 
   .line {
     margin: 0.5rem 0;
-    // &.head {
-    // }
-    // &.footer {
-    //   //    flex: 1;
-    // }
   }
 }
 
@@ -26,12 +21,21 @@
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
     rgba(0, 0, 0, 0.05) 0px 5px 10px;
   height: 10rem;
+  background-image: linear-gradient(60deg, #4f91cd, #4f91cd);
+  color: white;
+
+  .line {
+    margin: 0 0;
+    &.head {
+      color: #19388a;
+    }
+  }
 }
 
 .bigCardContainer {
   color: rgb(238, 223, 12);
   //background-color: cornsilk;
-  height: 9rem;
+  height: 10.5rem;
   margin: 2rem 0 2rem 0;
   padding: 0.25rem 1rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;

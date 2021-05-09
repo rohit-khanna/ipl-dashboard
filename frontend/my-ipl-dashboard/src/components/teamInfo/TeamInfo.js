@@ -6,6 +6,7 @@ import Label from "../common/label";
 import { isEmpty, round } from 'lodash';
 import { BigCard, SmallCard } from '../matchCard';
 import { Button } from 'react-bootstrap';
+import { getShortNames } from '../../utils';
 
 
 
@@ -31,7 +32,7 @@ export default function TeamInfo() {
     const winPercent = totalWins > 0 && totalMatches > 0 ? round(totalWins * 100 / totalMatches, 2) : 0
     return !isEmpty(data) ? (
         <div className="teamInfoContainer">
-            <h2 className="heading">{name}</h2>
+            <h2 className="heading">{`${name} (${getShortNames(name)})`}</h2>
             <div className="d-flex justify-content-space-around matchInfoContainer">
                 <div className="matchesInfo d-flex">
                     <Label text="Matches Played:" bold />
@@ -45,10 +46,10 @@ export default function TeamInfo() {
             <div className="d-flex flex-column matchDetailsContainer">
                 <BigCard matchDetails={matches[0]} name={name} />
                 <div className="smallCards d-flex justify-content-space-between">
-                    <SmallCard />
-                    <SmallCard />
-                    <SmallCard />
-                    <SmallCard />
+                    <SmallCard matchDetails={matches[1]} name={name} />
+                    <SmallCard matchDetails={matches[2]} name={name} />
+                    <SmallCard matchDetails={matches[3]} name={name} />
+                    <SmallCard matchDetails={matches[4]} name={name} />
 
                     <Button variant="link">{`More >>`}</Button>
 

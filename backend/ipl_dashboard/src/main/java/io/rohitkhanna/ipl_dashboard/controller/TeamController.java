@@ -33,7 +33,7 @@ public class TeamController {
     @GetMapping("/team/{id}")
     public Team getTeam(@PathVariable Long id) {
         Team team = this.repo.findById(id);
-        team.setMatches(matchRepo.findLatestMatchesByTeam(team.getName(), 4));
+        team.setMatches(matchRepo.findLatestMatchesByTeam(team.getName(), 5));
         return team;
     }
 
