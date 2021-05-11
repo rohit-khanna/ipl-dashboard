@@ -1,9 +1,9 @@
+@import "../../variables";
+
 .smallCardContainer,
 .bigCardContainer {
-  color: rgb(18, 18, 94);
-  //border: 1px solid white;
-  //border-radius: 5px;
-  cursor: pointer;
+  color: #12125e;
+
   padding: 0.5rem 0.5rem;
   background-color: white;
   &:hover {
@@ -17,11 +17,15 @@
 
 .smallCardContainer {
   width: 11rem;
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  box-shadow: #26394d 0px 20px 30px -10px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
     rgba(0, 0, 0, 0.05) 0px 5px 10px;
   height: 10rem;
-  background-image: linear-gradient(60deg, #4f91cd, #4f91cd);
+  background-image: linear-gradient(
+    60deg,
+    $primary-color-light,
+    $primary-color-light
+  );
   color: white;
 
   .line {
@@ -40,7 +44,11 @@
   padding: 0.25rem 1rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
-  background-image: linear-gradient(50deg, #19388a, #19388a);
+  background-image: linear-gradient(
+    50deg,
+    $primary-color-dark,
+    $primary-color-dark
+  );
 
   &:hover {
     transform: translateY(0px);

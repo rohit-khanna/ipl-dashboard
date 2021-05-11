@@ -23,6 +23,15 @@ code {
     monospace;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+  &:hover {
+    // text-decoration: none;
+    color: white;
+  }
+}
+
 .d-flex {
   display: flex;
 }

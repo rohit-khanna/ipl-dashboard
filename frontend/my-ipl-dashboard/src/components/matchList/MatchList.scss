@@ -1,0 +1,71 @@
+@import "../../variables";
+
+.matchListContainer {
+  .heading {
+    text-align: center;
+    color: rgb(238, 223, 12);
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    margin-right: 8rem;
+  }
+
+  .list-group-item {
+    font-size: 0.7rem;
+    padding: 0.5rem 1.1rem;
+    background-color: $primary-color-light;
+    cursor: pointer;
+    & > a {
+      text-decoration: none;
+      color: white;
+    }
+    &.active {
+      background-color: $primary-color-dark;
+    }
+
+    &:hover {
+      background-color: $primary-color-dark;
+    }
+  }
+
+  .dataList {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+
+    &.table-dark {
+      --bs-table-bg: #19388a;
+      --bs-table-striped-bg: #19388a;
+      --bs-table-striped-color: #fff;
+      --bs-table-active-bg: #4f91cd;
+      --bs-table-active-color: #fff;
+      --bs-table-hover-bg: #28428a;
+      --bs-table-hover-color: #fff;
+      color: #fff;
+      //border-color: #373b3e;
+    }
+
+    td,
+    th,
+    tr {
+      border: none;
+    }
+
+    th {
+      border-bottom: 1px solid #4f91cd;
+    }
+
+    .green {
+      color: rgb(49, 211, 98);
+    }
+    .red {
+      color: rgb(241, 68, 68);
+    }
+    .noData {
+      font-size: 1rem;
+      padding: 1rem 1rem;
+      text-align: center;
+    }
+    .align-center {
+      text-align: center;
+    }
+  }
+}

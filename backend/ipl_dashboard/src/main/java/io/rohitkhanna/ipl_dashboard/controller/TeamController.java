@@ -1,12 +1,16 @@
 package io.rohitkhanna.ipl_dashboard.controller;
 
+import java.time.LocalDate;
 import java.util.List;
 
+import org.apache.tomcat.util.bcel.Const;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.rohitkhanna.ipl_dashboard.model.MatchData;
 import io.rohitkhanna.ipl_dashboard.model.Team;
 import io.rohitkhanna.ipl_dashboard.repository.MatchRepository;
 import io.rohitkhanna.ipl_dashboard.repository.TeamRepository;
@@ -23,13 +27,6 @@ public class TeamController {
         this.matchRepo = matchRepo;
     }
 
-    // @GetMapping("/team/{teamName}")
-    // public Team getTeam(@PathVariable String teamName) {
-    // Team team = this.repo.findByName(teamName);
-    // team.setMatches(matchRepo.findLatestMatchesByTeam(teamName, 4));
-    // return team;
-    // }
-
     @GetMapping("/team/{id}")
     public Team getTeam(@PathVariable Long id) {
         Team team = this.repo.findById(id);
@@ -40,6 +37,16 @@ public class TeamController {
     @GetMapping("/teams")
     public List<Team> getTeamList() {
         return this.repo.findAll();
+    }
+
+    @GetMapping("/team/{id}/matches")
+    public List<MatchData> getMatchesForTeam(@PathVariable Long id, @RequestParam int year) {
+        Team team = this.repo.findById(id);
+
+        LocalDate startDate = LocalDate.of(year, 1, 1);
+        LocalDate endDate = LocalDate.of(year + 1, 1, 1);
+
+        return matchRepo.getMatchesByTeamBetweenDates(team.getName(), startDate, endDate);
     }
 
 }

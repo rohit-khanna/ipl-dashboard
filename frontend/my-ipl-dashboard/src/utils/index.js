@@ -6,3 +6,7 @@ export const getShortNames = (teamName) => {
     }
     return "";
 }
+
+export const getJsonFromQueryString = (searchParam) => {
+    return Object.fromEntries(new URLSearchParams(searchParam));
+}

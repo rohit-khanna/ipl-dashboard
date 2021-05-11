@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import './TeamInfo.scss';
 import { fetchTeamInfo } from '../../services'
 import Label from "../common/label";
@@ -51,7 +51,9 @@ export default function TeamInfo() {
                     <SmallCard matchDetails={matches[3]} name={name} />
                     <SmallCard matchDetails={matches[4]} name={name} />
 
-                    <Button variant="link">{`More >>`}</Button>
+                    <Button variant="link">
+                        <Link to={`/team/${teamId}/matches?year=${2020}`}>{`More >>`}</Link>
+                    </Button>
 
                 </div>
             </div>

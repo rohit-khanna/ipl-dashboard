@@ -8,6 +8,7 @@ import { fetchAllTeams } from '../../services';
 
 export default function Sidebar() {
     const [data, setData] = useState([])
+    const [teamId, setTeamId] = useState(0);
 
     useEffect(() => {
         async function fetch() {
@@ -22,7 +23,14 @@ export default function Sidebar() {
     }, []);
 
     const { pathname } = useLocation();
-    const teamId = pathname.split('/team/')[1] || "";
+
+
+    useEffect(() => {
+        if (pathname) {
+            const _teamId = pathname.split('/team/')[1]?.split('/')[0] || "";
+            setTeamId(_teamId)
+        }
+    }, [pathname])
 
     return (
         <aside className="sidebar d-flex flex-column">

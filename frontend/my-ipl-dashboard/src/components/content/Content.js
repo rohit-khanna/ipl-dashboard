@@ -15,9 +15,10 @@ export default function Content() {
                 <Route path={`/team/:teamId/matches`} exact>
                     <MatchList />
                 </Route>
-                <Route path={`/team/:teamId/matches/:matchId`} exact>
+                {/* <Route path={`/team/:teamId/matches/:matchId`} exact>
                     <MatchDetail />
-                </Route>
+                </Route> */}
+
                 <Route path="*">
                     <Home />
                 </Route>

@@ -11,7 +11,7 @@ import {
 function App() {
   return (
     <Container >
-      <Router>
+      <Router >
         <Header />
         <section className="d-flex mainContent">
           <Sidebar />

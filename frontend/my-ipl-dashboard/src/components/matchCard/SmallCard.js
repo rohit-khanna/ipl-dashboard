@@ -6,9 +6,9 @@ import './MatchCard.scss';
 
 export default function SmallCard({ matchDetails, name }) {
 
-    const { city, date,
-        playerOfMatch, venue, team1,
-        team2, tossDecision, tossWinner,
+    const {
+        team1,
+        team2,
         result, resultMargin, matchWinner } = matchDetails;
     const isCurrentTeamIsWinner = matchWinner === name;
 

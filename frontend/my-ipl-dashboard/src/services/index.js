@@ -22,3 +22,18 @@ export const fetchAllTeams = async () => {
         return {}
     }
 }
+
+
+export const fetchMatchesForTeam = async (teamId, year) => {
+    try {
+        const endpoint = `/team/${teamId}/matches?year=${year}`
+        const result = await axios.get(endpoint);
+        return result;
+    } catch (error) {
+        console.error("Error while fetching matches");
+        return {}
+    }
+}
+
+
+
