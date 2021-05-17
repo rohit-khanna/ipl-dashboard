@@ -23,6 +23,8 @@ public class MatchDataProcessor implements ItemProcessor<MatchInput, MatchData> 
         matchData.setMatchWinner(matchInput.getWinner());
         matchData.setPlayerOfMatch(matchInput.getPlayer_of_match());
         matchData.setVenue(matchInput.getVenue());
+        matchData.setUmpire1(matchInput.getUmpire1());
+        matchData.setUmpire2(matchInput.getUmpire2());
 
         String firstInningsTeam, secondInningsTeam;
         if (matchInput.getToss_decision().equals("bat")) {

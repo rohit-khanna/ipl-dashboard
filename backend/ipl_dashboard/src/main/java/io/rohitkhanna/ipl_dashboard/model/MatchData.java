@@ -23,6 +23,24 @@ public class MatchData {
     private String matchWinner;
     private String result;
     private String resultMargin;
+    private String umpire1;
+    private String umpire2;
+
+    public String getUmpire1() {
+        return umpire1;
+    }
+
+    public void setUmpire1(String umpire1) {
+        this.umpire1 = umpire1;
+    }
+
+    public String getUmpire2() {
+        return umpire2;
+    }
+
+    public void setUmpire2(String umpire2) {
+        this.umpire2 = umpire2;
+    }
 
     public Long getId() {
         return id;

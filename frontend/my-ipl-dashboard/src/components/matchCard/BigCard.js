@@ -9,7 +9,7 @@ export default function BigCard({ matchDetails, name }) {
     const { city, date,
         playerOfMatch, venue, team1,
         team2, tossDecision, tossWinner,
-        result, resultMargin, matchWinner } = matchDetails;
+        result, resultMargin, matchWinner, umpire1, umpire2 } = matchDetails;
 
     const isCurrentTeamIsWinner = matchWinner === name;
 
@@ -26,22 +26,27 @@ export default function BigCard({ matchDetails, name }) {
                 </div>
 
             </div>
-            <div className="line d-flex  justify-content-space-between align-items-flex-end flex-wrap">
+            <div className=" d-flex  justify-content-space-between align-items-flex-end">
                 <div className="venue"> <Label size="s" text={`Venue: ${venue} , ${city}`} /></div>
                 <div className="date"><Label text={`Date: ${format(parseISO(date), "dd MMM yyyy")}`} size="s" /></div>
-                <div className="toss d-flex justify-content-space-between align-items-flex-end">
-                    <Label size="s" text={`Toss: ${tossWinner} ( chose to ${tossDecision} )`} />
-                </div>
+
+            </div>
+            <div className=" d-flex  justify-content-space-between align-items-flex-end">
+
+                <Label size="s" text={`Toss: ${tossWinner} ( chose to ${tossDecision} )`} />
+                <Label size="s" text={`Umpires: ${umpire1} , ${umpire2}`} />
+
             </div>
 
             <div className="line d-flex footer justify-content-space-between align-items-flex-end">
 
                 <div className="d-flex">
                     <Label text={matchWinner} size="m" bold />
-
-                    <Label size="m" text={`won by ${resultMargin} ${result}`} /></div>
+                    <Label size="m" text={`won by ${resultMargin} ${result}`} />
+                </div>
                 <div className="d-flex"> <Label text="Player Of Match:" size="m" bold />
-                    <Label size="m" text={playerOfMatch} /></div>
+                    <Label size="m" text={playerOfMatch} />
+                </div>
 
             </div>
         </div>
